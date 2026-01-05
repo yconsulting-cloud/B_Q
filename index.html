@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Analytics (remplacer G-XXXXXXXXXX ou supprimer) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Le Bistro'Quai",
+        "description": "Restaurant avec terrasse sur les quais de l'Adour a Bayonne. Cuisine de qualite, produits frais, menu midi a 23 euros.",
+        "url": "https://bistroquai.madebyyuca.com",
+        "telephone": "05 59 56 91 36",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "27 Quai Amiral Jaureguiberry",
+            "addressLocality": "Bayonne",
+            "postalCode": "64100",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "{{GEO_LAT}}",
+            "longitude": "{{GEO_LNG}}"
+        },
+        {{SCHEMA_EXTRA}}
+        "acceptsReservations": "True"
+    }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Bistro'Quai | Restaurant sur les Quais de Bayonne</title>
+    <meta name="description" content="Restaurant avec terrasse sur les quais de l'Adour a Bayonne. Cuisine de qualite, produits frais, menu midi a 23 euros.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://bistroquai.madebyyuca.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Le Bistro'Quai | Restaurant sur les Quais de Bayonne">
+    <meta property="og:description" content="Restaurant avec terrasse sur les quais de l'Adour a Bayonne. Cuisine de qualite, produits frais, menu midi a 23 euros.">
+    <meta property="og:url" content="https://bistroquai.madebyyuca.com">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a2634' width='100' height='100' rx='12'/><text x='50' y='65' font-size='45' text-anchor='middle' fill='%232563eb'>B</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="core.css">
+    
+    <!-- Theme Variables -->
+    <style>
+        :root {
+            /* Couleurs */
+            --c-bg: #f9f8f6;
+            --c-bg-alt: #ffffff;
+            --c-bg-dark: #1a2634;
+            --c-bg-warm: #f3f1ed;
+            --c-accent: #2563eb;
+            --c-accent-dark: #1d4ed8;
+            --c-text: #1a2634;
+            --c-text-light: #5a6474;
+            --c-text-inv: #f9f8f6;
+            --c-border: #e2e0dc;
+            
+            /* Typos */
+            --ff-display: 'DM Serif Display', Georgia, serif;
+            --ff-body: 'Outfit', sans-serif;
+            
+            /* Nav scrolled background */
+            --nav-scrolled-bg: rgba(249,248,246,.95);
+        }
+        
+        /* Hero background */
+        .hero__bg {
+            background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80');
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav__inner">
+                <a href="#" class="nav__logo">Le Bistro'Quai</a>
+                <div class="nav__links">
+                    <a href="#about" class="nav__link">Le Restaurant</a>
+                    <a href="#services" class="nav__link">La Carte</a>
+                    <a href="#gallery" class="nav__link">Galerie</a>
+                    <a href="#contact" class="nav__link">Contact</a>
+                    <a href="tel:0559569136" class="nav__cta">Reserver</a>
+                </div>
+                <button class="nav__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Nav -->
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-mobile" id="navMobile">
+        <a href="#about">Le Restaurant</a>
+        <a href="#services">La Carte</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:0559569136" class="nav-mobile__cta">Reserver</a>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__label">Restaurant - Bayonne</span>
+            <h1 class="hero__title">Le Bistro'Quai</h1>
+            <p class="hero__subtitle">Cuisine de qualite sur les quais de l'Adour, terrasse vue fleuve</p>
+            <div class="hero__ctas">
+                <a href="tel:0559569136" class="btn btn--primary">Reserver une table</a>
+                <a href="#services" class="btn btn--outline">Voir la carte</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span class="hero__scroll-text">Decouvrir</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__image">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Interieur du restaurant Le Bistro'Quai">
+                </div>
+                <div class="about__content">
+                    <span class="section-label">Le Restaurant</span>
+                    <h2 class="section-title">Une table sur les quais de Bayonne</h2>
+                    <p class="about__text">Au bord de l'Adour, Le Bistro'Quai vous accueille dans une ambiance conviviale avec vue sur le fleuve. En salle ou en terrasse, profitez d'une cuisine genereuse preparee avec des produits frais et de saison.</p>
+                    <p class="about__text">Notre equipe attentionnee vous propose une carte gourmande ou se melent saveurs du terroir et inspirations de la mer. Rillettes de thon, merlu en croute de chorizo, et desserts maison vous attendent.</p>
+                    <p class="about__signature">L'equipe du Bistro'Quai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services__header">
+                <span class="section-label">La Carte</span>
+                <h2 class="section-title">Nos suggestions</h2>
+                <p class="services__subtitle">Produits frais, generosite, et saveurs</p>
+            </div>
+            <div class="services__grid">
+                <div class="services__card">
+                    
+                    <h3 class="services__card-title">Entrees</h3>
+                    <p class="services__card-desc">Rillettes de thon maison, produits de la mer, saveurs du Sud-Ouest. Des entrees genereuses pour bien commencer.</p>
+                </div>
+                <div class="services__card">
+                    
+                    <h3 class="services__card-title">Plats</h3>
+                    <p class="services__card-desc">Poissons frais, viandes du terroir, plat du jour. Notre specialite : le merlu en croute de chorizo.</p>
+                </div>
+                <div class="services__card">
+                    
+                    <h3 class="services__card-title">Desserts</h3>
+                    <p class="services__card-desc">Desserts maison, douceurs gourmandes. Une touche sucree pour terminer en beaute.</p>
+                </div>
+            </div>
+            <div class="services__cta">
+                <a href="tel:0559569136" class="btn btn--primary">Reserver une table</a>
+                <p class="services__price">Formule midi : 23 euros <span>entree + plat + dessert</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="gallery__header">
+                <span class="section-label">Galerie</span>
+                <h2 class="section-title">L'ambiance Bistro'Quai</h2>
+            </div>
+            <div class="gallery__grid">
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="{{GALLERY_1_ALT}}"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80" alt="{{GALLERY_2_ALT}}"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80" alt="{{GALLERY_3_ALT}}"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1535140728325-a4d3707eee61?w=400&q=80" alt="{{GALLERY_4_ALT}}"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80" alt="{{GALLERY_5_ALT}}"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials__header">
+                <span class="section-label">Avis clients</span>
+                <h2 class="section-title">Ce qu'ils en disent</h2>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial">
+                    <div class="testimonial__stars">5/5</div>
+                    <p class="testimonial__text">Tres bon restaurant. Personnel a l'ecoute et disponible. Rapport qualite prix plus que raisonnable. Les plats arrivent vite et la nourriture etait tres bonne.</p>
+                    <p class="testimonial__author">Camille S.</p>
+                    <p class="testimonial__source">Google - Octobre 2025</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">5/5</div>
+                    <p class="testimonial__text">Restaurant situe sur le quai de l'Adour. Accueil tres convivial avec un service attentionne. La formule midi a 23 euros est d'excellente qualite.</p>
+                    <p class="testimonial__author">Falco P.</p>
+                    <p class="testimonial__source">Google - Septembre 2025</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial__stars">5/5</div>
+                    <p class="testimonial__text">Excellent restaurant, tout etait parfait. Service 5/5, cuisine au top. Les rillettes de thon et le merlu en croute de chorizo etaient excellents.</p>
+                    <p class="testimonial__author">Aurelien P.</p>
+                    <p class="testimonial__source">Google - Aout 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__inner">
+                <div class="contact__info">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">Venez nous voir</h2>
+                    <div class="contact__item">
+                        <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div class="contact__item-content">
+                            <h4>Adresse</h4>
+                            <p>27 Quai Amiral Jaureguiberry<br>64100 Bayonne</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <div class="contact__item-content">
+                            <h4>Téléphone</h4>
+                            <a href="tel:0559569136">05 59 56 91 36</a>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+        <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+        <div class="contact__item-content"><h4>Instagram</h4><a href="https://www.instagram.com/le_bistroquai64/" target="_blank">@le_bistroquai64</a></div>
+    </div>
+                    <div class="contact__hours">
+                        <h4>Horaires d'ouverture</h4>
+                        <div class="contact__hours-row"><span>Lundi - Dimanche</span><span>12h-14h / 19h-22h</span></div>
+                    </div>
+                </div>
+                <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.6424390624315!2d-1.4778063237887962!3d43.48893187111034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51408c2bcf7e21%3A0x6913aead1069c15c!2sLe%20Bistro&#39;Quai!5e0!3m2!1sfr!2sfr!4v1767641600897!5m2!1sfr!2sfr" allowfullscreen loading="lazy" title="Localisation du Patxamama"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="form" id="reservation">
+        <div class="container">
+            <div class="form__inner">
+                <div class="form__header">
+                    <span class="section-label">Reservation</span>
+                    <h2 class="section-title">Reservez votre table</h2>
+                    <p>Ou appelez-nous au <a href="tel:0559569136">05 59 56 91 36</a></p>
+                </div>
+                <form id="contactForm">
+                    <div class="form__group"><label class="form__label" for="name">Nom</label><input class="form__input" type="text" id="name" placeholder="Votre nom" required></div>
+                    <div class="form__group"><label class="form__label" for="email">Email</label><input class="form__input" type="email" id="email" placeholder="votre@email.com" required></div>
+                    <div class="form__group"><label class="form__label" for="phone">Téléphone</label><input class="form__input" type="tel" id="phone" placeholder="06 XX XX XX XX"></div>
+                    <div class="form__group"><label class="form__label" for="message">Message</label><textarea class="form__textarea" id="message" placeholder="Date, nombre de personnes, terrasse..."></textarea></div>
+                    <button type="submit" class="btn btn--primary form__submit">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="footer__brand">Le Bistro'Quai</a>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/le_bistroquai64/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.058-.976.045-1.505.207-1.858.344-.466.182-.8.398-1.15.748-.35.35-.566.684-.748 1.15-.137.353-.3.882-.344 1.857-.048 1.055-.058 1.37-.058 4.041 0 2.67.01 2.986.058 4.04.045.976.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.684.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058 2.67 0 2.987-.01 4.04-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041 0-2.67-.01-2.986-.058-4.04-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.055-.048-1.37-.058-4.041-.058zm0 3.063a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 8.468a3.333 3.333 0 100-6.666 3.333 3.333 0 000 6.666zm6.538-8.671a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a><a href="https://www.facebook.com/LeBistroQuai64" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">© 2025 Le Bistro'Quai. Tous droits réservés.</p>
+                <div class="footer__links"><a href="/mentions-legales.html">Mentions légales</a><a href="/politique-confidentialite.html">Confidentialité</a></div>
+                <p class="footer__credit">Site créé par <a href="https://madebyyuca.com" target="_blank" rel="noopener">Yuca</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <button class="yuca-trigger" id="yucaTrigger" aria-label="Chat"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></button>
+    <div class="yuca-window" id="yucaWindow">
+        <div class="yuca-header">
+            <div class="yuca-avatar">B</div>
+            <div class="yuca-header-info"><h4>Le Bistro'Quai</h4><span>Répond rapidement</span></div>
+            <button class="yuca-close" id="yucaClose"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+        <div class="yuca-messages" id="yucaMessages"></div>
+        <div class="yuca-input-area">
+            <input type="text" class="yuca-input" id="yucaInput" placeholder="Posez votre question...">
+            <button class="yuca-send" id="yucaSend"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+        </div>
+    </div>
+
+    <!-- Site Config (à personnaliser) -->
+    <script>
+        window.SITE_CONFIG = {
+            businessName: 'Le Bistro'Quai',
+            chatbotPrompt: `Tu es l'assistant du restaurant Le Bistro'Quai a Bayonne. Adresse: 27 Quai Amiral Jaureguiberry. Tel: 05 59 56 91 36. Terrasse vue fleuve. Formule midi 23 euros. Horaires: tous les jours 12h-14h et 19h-22h. Reponds en 2-3 phrases max. Termine par [SUGGESTIONS:Option1|Option2]`,
+            chatbotWelcome: 'Bonjour, bienvenue au Bistro'Quai. Comment puis-je vous aider ?',
+            chatbotSuggestions: ['Horaires', 'Reserver', 'Voir la carte'],
+            avatarLetter: 'B'
+        };
+    </script>
+    
+    <!-- Core JS -->
+    <script src="core.js"></script>
+</body>
+</html>
