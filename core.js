@@ -194,17 +194,23 @@
 
         const config = window.SITE_CONFIG || {};
         
-        try {
-            const response = await fetch('https://yuca-api.vercel.app/api/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    system: config.chatbotPrompt || 'Tu es un assistant helpful.',
-                    messages: messages.map(function(m) {
-                        return { role: m.role, content: m.content };
-                    })
+try {
+    const response = await fetch('https://yuca-api.vercel.app/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            messages: [
+                {
+                    role: 'system',
+                    content: config.chatbotPrompt || 'Tu es l’assistant du restaurant.'
+                },
+                ...messages.map(function(m) {
+                    return { role: m.role, content: m.content };
                 })
-            });
+            ]
+        })
+    });
+
             
             const data = await response.json();
             hideTyping();
