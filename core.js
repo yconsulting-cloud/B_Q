@@ -114,15 +114,19 @@
         if (chatWindow) {
             chatWindow.classList.toggle('open', isOpen);
             
-            if (isOpen && messages.length === 0) {
-                const config = window.SITE_CONFIG || {};
-                addBotMessage(
-                    config.chatbotWelcome || 'Bonjour, comment puis-je vous aider ?',
-                    config.chatbotSuggestions || ['Horaires', 'Contact', 'Informations']
-                );
-            }
-        }
-    }
+if (isOpen && messages.length === 0) {
+  const config = window.SITE_CONFIG || {};
+
+  messages.push({
+    role: "system",
+    content: config.chatbotPrompt
+  });
+
+  addBotMessage(
+    config.chatbotWelcome,
+    config.chatbotSuggestions
+  );
+}
 
     if (trigger) trigger.addEventListener('click', toggleChat);
     if (closeBtn) closeBtn.addEventListener('click', toggleChat);
