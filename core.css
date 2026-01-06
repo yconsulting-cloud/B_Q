@@ -103,7 +103,7 @@ ul{list-style:none}
 .services__card-icon{font-size:2.5rem;margin-bottom:1.5rem}
 .services__card-title{font-family:var(--ff-display);font-size:1.5rem;color:var(--c-text-inv);margin-bottom:1rem}
 .services__card-desc{font-size:.875rem;color:rgba(255,255,255,.7);line-height:1.8}
-.services__cta{display:flex;text-align:center;margin-top:4rem}
+.services__cta{display:flex;justify-content:center;text-align:center;margin-top:4rem}
 .services__price{display:inline-block;margin-top:2rem;font-family:var(--ff-display);font-size:1.5rem;color:var(--c-accent)}
 .services__price span{font-size:.875rem;color:rgba(255,255,255,.6);font-family:var(--ff-body)}
 
