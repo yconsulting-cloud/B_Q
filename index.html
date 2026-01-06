@@ -1,333 +1,637 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Analytics (remplacer G-XXXXXXXXXX ou supprimer) -->
+    <!-- ========== ANALYTICS ========== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "name": "Le Bistro'Quai",
-        "description": "Restaurant avec terrasse sur les quais de l'Adour a Bayonne. Cuisine de qualite, produits frais, menu midi a 23 euros.",
-        "url": "https://bistroquai.madebyyuca.com",
-        "telephone": "05 59 56 91 36",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "27 Quai Amiral Jaureguiberry",
-            "addressLocality": "Bayonne",
-            "postalCode": "64100",
-            "addressCountry": "FR"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "{{GEO_LAT}}",
-            "longitude": "{{GEO_LNG}}"
-        },
-        {{SCHEMA_EXTRA}}
-        "acceptsReservations": "True"
-    }
-    </script>
-
+    <!-- ========== SEO & META ========== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Bistro'Quai | Restaurant sur les Quais de Bayonne</title>
-    <meta name="description" content="Restaurant avec terrasse sur les quais de l'Adour a Bayonne. Cuisine de qualite, produits frais, menu midi a 23 euros.">
+    <title>Le Bistro'Quai | Restaurant Bayonne - Cuisine Française & Basque</title>
+    <meta name="description" content="Restaurant sur les quais de la Nive à Bayonne. Cuisine française revisitée, burger basque, desserts maison. Terrasse face à la Nive, près des Halles.">
     <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://bistroquai.madebyyuca.com">
-    
-    <!-- Open Graph -->
+    <link rel="canonical" href="https://lebistroquai.madebyyuca.com">
     <meta property="og:type" content="restaurant">
-    <meta property="og:title" content="Le Bistro'Quai | Restaurant sur les Quais de Bayonne">
-    <meta property="og:description" content="Restaurant avec terrasse sur les quais de l'Adour a Bayonne. Cuisine de qualite, produits frais, menu midi a 23 euros.">
-    <meta property="og:url" content="https://bistroquai.madebyyuca.com">
+    <meta property="og:title" content="Le Bistro'Quai | Restaurant Bayonne - Cuisine Française & Basque">
+    <meta property="og:description" content="Restaurant sur les quais de la Nive à Bayonne. Cuisine française revisitée, burger basque, desserts maison. Terrasse face à la Nive, près des Halles.">
+    <meta property="og:url" content="https://lebistroquai.madebyyuca.com">
     <meta property="og:locale" content="fr_FR">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a2634' width='100' height='100' rx='12'/><text x='50' y='65' font-size='45' text-anchor='middle' fill='%232563eb'>B</text></svg>">
 
-    <!-- Google Fonts -->
+    <!-- ========== SCHEMA.ORG ========== -->
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Le Bistro'Quai","description":"Restaurant sur les quais de la Nive à Bayonne. Cuisine française revisitée, burger basque, desserts maison. Terrasse face à la Nive, près des Halles.","url":"https://lebistroquai.madebyyuca.com","telephone":"05 59 56 91 36","address":{"@type":"PostalAddress","streetAddress":"27 Quai Amiral Jauréguiberry","addressLocality":"Bayonne","postalCode":"64100","addressCountry":"FR"}}</script>
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f172a' width='100' height='100' rx='12'/><text x='50' y='65' font-size='45' text-anchor='middle' fill='%23d97706'>B</text></svg>">
+
+    <!-- ========== FONTS ========== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="core.css">
-    
-    <!-- Theme Variables -->
+    <!-- ========== STYLES ========== -->
     <style>
-        :root {
-            /* Couleurs */
-            --c-bg: #f9f8f6;
-            --c-bg-alt: #ffffff;
-            --c-bg-dark: #1a2634;
-            --c-bg-warm: #f3f1ed;
-            --c-accent: #2563eb;
-            --c-accent-dark: #1d4ed8;
-            --c-text: #1a2634;
-            --c-text-light: #5a6474;
-            --c-text-inv: #f9f8f6;
-            --c-border: #e2e0dc;
-            
-            /* Typos */
-            --ff-display: 'DM Serif Display', Georgia, serif;
-            --ff-body: 'Outfit', sans-serif;
-            
-            /* Nav scrolled background */
-            --nav-scrolled-bg: rgba(249,248,246,.95);
-        }
-        
-        /* Hero background */
-        .hero__bg {
-            background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80');
-        }
+/* === VARIABLES === */
+:root {
+    --c-bg: #f8fafc;
+    --c-bg-alt: #ffffff;
+    --c-bg-dark: #0f172a;
+    --c-bg-warm: #f1f5f9;
+    --c-accent: #d97706;
+    --c-accent-dark: #b45309;
+    --c-text: #0f172a;
+    --c-text-light: #475569;
+    --c-text-inv: #f8fafc;
+    --c-border: #e2e8f0;
+    --ff-display: 'Playfair Display', Georgia, serif;
+    --ff-body: 'Source Sans 3', sans-serif;
+}
+
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); font-size: 1rem; line-height: 1.7; color: var(--c-text); background: var(--c-bg); overflow-x: hidden; }
+h1, h2, h3 { font-family: var(--ff-display); font-weight: 500; line-height: 1.2; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* === UTILITIES === */
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem); }
+.section-label { font-size: .75rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--c-accent); margin-bottom: 1rem; }
+.section-title { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1.5rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-size: .875rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; transition: all .4s; }
+.btn--primary { background: var(--c-accent); color: var(--c-bg-dark); }
+.btn--primary:hover { background: var(--c-accent-dark); transform: translateY(-2px); }
+.btn--outline { background: transparent; color: var(--c-text); border: 1px solid var(--c-text); }
+.btn--outline:hover { background: var(--c-text); color: var(--c-bg); }
+.hero .btn--outline { color: var(--c-text-inv); border-color: var(--c-text-inv); }
+.hero .btn--outline:hover { background: var(--c-text-inv); color: var(--c-bg-dark); }
+
+/* === NAV === */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.5rem 0; transition: all .4s; background: linear-gradient(to bottom, rgba(0,0,0,.5), transparent); }
+.nav.scrolled { background: var(--c-bg-dark); padding: 1rem 0; box-shadow: 0 4px 30px rgba(0,0,0,.15); }
+.nav__inner { display: flex; justify-content: space-between; align-items: center; }
+.nav__logo { font-family: var(--ff-display); font-size: 1.5rem; font-weight: 500; color: var(--c-text-inv); transition: all .4s; }
+.nav__logo:hover { opacity: .8; }
+.nav__links { display: flex; gap: 2rem; align-items: center; }
+.nav__link { font-size: .875rem; font-weight: 500; color: var(--c-text-inv); transition: all .3s; position: relative; }
+.nav__link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--c-accent); transition: width .3s; }
+.nav__link:hover::after { width: 100%; }
+.nav__link:hover { color: var(--c-accent); }
+.nav__cta { padding: .75rem 1.5rem; font-size: .75rem; background: var(--c-accent); color: var(--c-bg-dark); font-weight: 600; letter-spacing: .05em; text-transform: uppercase; transition: all .3s; }
+.nav__cta:hover { background: var(--c-text-inv); transform: translateY(-2px); }
+.nav__burger { display: none; flex-direction: column; gap: 5px; padding: .5rem; }
+.nav__burger span { display: block; width: 24px; height: 2px; background: var(--c-text-inv); transition: all .4s; }
+.nav-mobile { position: fixed; top: 0; right: 0; z-index: 200; width: min(320px, 85vw); height: 100vh; background: var(--c-bg-dark); padding: 5rem 2rem 2rem; transform: translateX(100%); transition: transform .4s; }
+.nav-mobile.open { transform: translateX(0); }
+.nav-mobile a { display: block; padding: 1rem 0; font-family: var(--ff-display); font-size: 1.25rem; color: var(--c-text-inv); border-bottom: 1px solid rgba(255,255,255,.1); transition: padding-left .3s; }
+.nav-mobile a:hover { padding-left: .5rem; color: var(--c-accent); }
+.nav-mobile__cta { display: inline-block; margin-top: 2rem; padding: 1rem 2rem; background: var(--c-accent); color: var(--c-bg-dark); font-size: .875rem; font-weight: 600; }
+.nav-overlay { position: fixed; inset: 0; z-index: 150; background: rgba(0,0,0,.5); opacity: 0; visibility: hidden; transition: all .4s; }
+.nav-overlay.visible { opacity: 1; visibility: visible; }
+
+/* === ANIMATIONS === */
+.fade-in, .fade-in-left, .fade-in-right { opacity: 1; transform: none; }
+.js-loaded .fade-in { opacity: 0; transform: translateY(30px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js-loaded .fade-in-left { opacity: 0; transform: translateX(-30px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js-loaded .fade-in-right { opacity: 0; transform: translateX(30px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.js-loaded .fade-in.visible, .js-loaded .fade-in-left.visible, .js-loaded .fade-in-right.visible { opacity: 1; transform: none; }
+
+/* === HERO === */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.hero__bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80') center/cover; }
+.hero__overlay { position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.6)); }
+.hero__content { position: relative; z-index: 1; text-align: center; padding: 2rem; max-width: 800px; }
+.hero__label { font-size: .75rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--c-accent); margin-bottom: 1.5rem; }
+.hero__title { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 400; color: var(--c-text-inv); margin-bottom: 1rem; }
+.hero__subtitle { font-family: var(--ff-display); font-size: clamp(1rem, 2vw, 1.25rem); font-style: italic; color: rgba(255,255,255,.85); margin-bottom: 2rem; }
+.hero__ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* === ABOUT === */
+.about { padding: 6rem 0; }
+.about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.about__image img { width: 100%; height: 450px; object-fit: cover; }
+.about__text { font-size: 1.05rem; color: var(--c-text-light); margin-bottom: 1.5rem; line-height: 1.8; }
+.about__signature { margin-top: 2rem; font-family: var(--ff-display); font-size: 1.1rem; font-style: italic; }
+
+/* === SERVICES === */
+.services { padding: 6rem 0; background: var(--c-bg-dark); color: var(--c-text-inv); }
+.services__header { text-align: center; margin-bottom: 4rem; }
+.services__header .section-title { color: var(--c-text-inv); }
+.services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.services__card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); padding: 2.5rem; text-align: center; transition: all .4s; }
+.services__card:hover { background: rgba(255,255,255,.08); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,.3); border-color: var(--c-accent); }
+.services__card-title { font-family: var(--ff-display); font-size: 1.35rem; margin-bottom: 1rem; transition: color .3s; }
+.services__card:hover .services__card-title { color: var(--c-accent); }
+.services__card-desc { font-size: .875rem; color: rgba(255,255,255,.7); line-height: 1.7; }
+.services__cta { text-align: center; margin-top: 3rem; }
+.services__price { display: block; margin-top: 1.5rem; font-family: var(--ff-display); font-size: 1.25rem; color: var(--c-accent); }
+.services__price span { font-size: .8rem; color: rgba(255,255,255,.5); font-family: var(--ff-body); }
+
+/* === GALLERY === */
+.gallery { padding: 6rem 0; background: var(--c-bg-warm); }
+.gallery__header { text-align: center; margin-bottom: 3rem; }
+.gallery__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; }
+.gallery__item { overflow: hidden; aspect-ratio: 1; }
+.gallery__item:first-child { grid-column: span 2; grid-row: span 2; }
+.gallery__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.gallery__item:hover img { transform: scale(1.05); }
+
+/* === TESTIMONIALS === */
+.testimonials { padding: 6rem 0; }
+.testimonials__header { text-align: center; margin-bottom: 4rem; }
+.testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.testimonial { background: var(--c-bg-alt); padding: 2rem; border: 1px solid var(--c-border); }
+.testimonial__stars { color: var(--c-accent); font-size: .875rem; margin-bottom: 1rem; }
+.testimonial__text { font-family: var(--ff-display); font-size: 1rem; font-style: italic; margin-bottom: 1.5rem; line-height: 1.8; }
+.testimonial__author { font-size: .875rem; font-weight: 600; }
+.testimonial__source { font-size: .75rem; color: var(--c-text-light); }
+
+/* === CONTACT === */
+.contact { padding: 6rem 0; background: var(--c-bg-warm); }
+.contact__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.contact__item { margin-bottom: 1.5rem; }
+.contact__item h4 { font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: .25rem; }
+.contact__item p, .contact__item a { color: var(--c-text-light); }
+.contact__item a:hover { color: var(--c-accent); }
+.contact__hours { background: var(--c-bg-alt); padding: 1.5rem; border: 1px solid var(--c-border); margin-top: 1.5rem; }
+.contact__hours h4 { font-family: var(--ff-display); font-size: 1.1rem; margin-bottom: 1rem; }
+.contact__hours-row { display: flex; justify-content: space-between; font-size: .875rem; margin-bottom: .5rem; }
+.contact__hours-row span:first-child { color: var(--c-text-light); }
+.contact__map { width: 100%; height: 100%; min-height: 350px; border: none; }
+
+/* === FORM === */
+.form { background: var(--c-bg-dark); padding: 6rem 0; }
+.form__inner { max-width: 550px; margin: 0 auto; text-align: center; }
+.form__header { margin-bottom: 2.5rem; }
+.form__header .section-title { color: var(--c-text-inv); }
+.form__header p { color: rgba(255,255,255,.7); }
+.form__header a { color: var(--c-accent); }
+.form__group { margin-bottom: 1.25rem; text-align: left; }
+.form__label { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: .5rem; }
+.form__input, .form__textarea { width: 100%; padding: 1rem; font-family: var(--ff-body); font-size: 1rem; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: var(--c-text-inv); transition: border .4s; }
+.form__input:focus, .form__textarea:focus { outline: none; border-color: var(--c-accent); }
+.form__input::placeholder, .form__textarea::placeholder { color: rgba(255,255,255,.4); }
+.form__textarea { min-height: 120px; resize: vertical; }
+.form__submit { width: 100%; padding: 1.25rem; margin-top: .5rem; }
+
+/* === FOOTER === */
+.footer { background: var(--c-bg-dark); padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,.1); }
+.footer__inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.footer__brand { font-family: var(--ff-display); font-size: 1.5rem; color: var(--c-text-inv); }
+.footer__social { display: flex; gap: .75rem; }
+.footer__social a { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.2); color: var(--c-text-inv); transition: all .4s; }
+.footer__social a:hover { background: var(--c-accent); border-color: var(--c-accent); color: var(--c-bg-dark); }
+.footer__bottom { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer__copy, .footer__links a, .footer__credit { font-size: .8rem; color: rgba(255,255,255,.5); }
+.footer__links { display: flex; gap: 1.5rem; }
+.footer__links a:hover { color: var(--c-accent); }
+.footer__credit a { color: var(--c-accent); }
+
+/* === CHATBOT === */
+.yuca-trigger { position: fixed; bottom: 24px; right: 24px; z-index: 9999; width: 56px; height: 56px; border-radius: 50%; background: var(--c-accent); box-shadow: 0 4px 20px rgba(0,0,0,.2); display: flex; align-items: center; justify-content: center; transition: transform .3s; }
+.yuca-trigger:hover { transform: scale(1.08); }
+.yuca-trigger svg { width: 26px; height: 26px; fill: var(--c-bg-dark); }
+.yuca-window { position: fixed; bottom: 96px; right: 24px; z-index: 9998; width: 360px; height: 480px; background: var(--c-bg-alt); border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,.2); display: none; flex-direction: column; overflow: hidden; border: 1px solid var(--c-border); }
+.yuca-window.open { display: flex; }
+.yuca-header { background: var(--c-bg-dark); color: var(--c-text-inv); padding: 14px 18px; display: flex; align-items: center; gap: 10px; }
+.yuca-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center; font-family: var(--ff-display); font-weight: 600; font-size: 16px; color: var(--c-bg-dark); }
+.yuca-header-info h4 { font-size: 14px; font-weight: 600; margin: 0; }
+.yuca-header-info span { font-size: 11px; color: rgba(255,255,255,.6); }
+.yuca-close { margin-left: auto; color: var(--c-text-inv); padding: 4px; }
+.yuca-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.yuca-message { max-width: 85%; padding: 10px 14px; border-radius: 10px; font-size: 14px; line-height: 1.5; }
+.yuca-message--bot { background: var(--c-bg-warm); color: var(--c-text); align-self: flex-start; border-bottom-left-radius: 4px; }
+.yuca-message--user { background: var(--c-accent); color: var(--c-bg-dark); align-self: flex-end; border-bottom-right-radius: 4px; }
+.yuca-input-area { padding: 14px; border-top: 1px solid var(--c-border); display: flex; gap: 8px; }
+.yuca-input { flex: 1; padding: 10px 14px; border: 1px solid var(--c-border); border-radius: 20px; font-size: 14px; outline: none; background: var(--c-bg); color: var(--c-text); }
+.yuca-input:focus { border-color: var(--c-accent); }
+.yuca-send { width: 40px; height: 40px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center; }
+.yuca-send svg { width: 18px; height: 18px; fill: var(--c-bg-dark); }
+.yuca-typing { display: flex; gap: 4px; padding: 10px 14px; background: var(--c-bg-warm); border-radius: 10px; align-self: flex-start; }
+.yuca-typing span { width: 6px; height: 6px; background: var(--c-text-light); border-radius: 50%; animation: ytyp 1.4s infinite; }
+.yuca-typing span:nth-child(2) { animation-delay: .2s; }
+.yuca-typing span:nth-child(3) { animation-delay: .4s; }
+@keyframes ytyp { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-3px); } }
+.yuca-quick-replies { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.yuca-quick-reply { padding: 6px 12px; background: transparent; border: 1px solid var(--c-accent); border-radius: 14px; font-size: 12px; color: var(--c-accent); cursor: pointer; transition: all .3s; }
+.yuca-quick-reply:hover { background: var(--c-accent); color: var(--c-bg-dark); }
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+    .about__inner { grid-template-columns: 1fr; }
+    .about__image { order: -1; }
+    .services__grid { grid-template-columns: 1fr; }
+    .testimonials__grid { grid-template-columns: 1fr; }
+    .contact__inner { grid-template-columns: 1fr; }
+    .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .nav__links { display: none; }
+    .nav__burger { display: flex; }
+    .footer__inner, .footer__bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+    .hero__ctas { flex-direction: column; }
+    .hero__ctas .btn { width: 100%; }
+    .gallery__grid { grid-template-columns: 1fr; }
+    .gallery__item:first-child { grid-column: span 1; }
+    .yuca-window { width: calc(100vw - 32px); height: calc(100vh - 140px); bottom: 88px; right: 16px; left: 16px; }
+}
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ========== NAV ========== -->
     <nav class="nav" id="nav">
         <div class="container">
             <div class="nav__inner">
                 <a href="#" class="nav__logo">Le Bistro'Quai</a>
                 <div class="nav__links">
-                    <a href="#about" class="nav__link">Le Restaurant</a>
+                    <a href="#about" class="nav__link">Notre Histoire</a>
                     <a href="#services" class="nav__link">La Carte</a>
                     <a href="#gallery" class="nav__link">Galerie</a>
                     <a href="#contact" class="nav__link">Contact</a>
-                    <a href="tel:0559569136" class="nav__cta">Reserver</a>
+                    <a href="tel:0559569136" class="nav__cta">Réserver</a>
                 </div>
                 <button class="nav__burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
-    
-    <!-- Mobile Nav -->
     <div class="nav-overlay" id="navOverlay"></div>
     <div class="nav-mobile" id="navMobile">
-        <a href="#about">Le Restaurant</a>
+        <a href="#about">Notre Histoire</a>
         <a href="#services">La Carte</a>
         <a href="#gallery">Galerie</a>
         <a href="#contact">Contact</a>
-        <a href="tel:0559569136" class="nav-mobile__cta">Reserver</a>
+        <a href="tel:0559569136" class="nav-mobile__cta">Réserver</a>
     </div>
 
-    <!-- Hero -->
+    <!-- ========== HERO ========== -->
     <header class="hero">
         <div class="hero__bg"></div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
-            <span class="hero__label">Restaurant - Bayonne</span>
+            <span class="hero__label">Restaurant — Bayonne</span>
             <h1 class="hero__title">Le Bistro'Quai</h1>
-            <p class="hero__subtitle">Cuisine de qualite sur les quais de l'Adour, terrasse vue fleuve</p>
+            <p class="hero__subtitle">Cuisine française revisitée avec créativité. Terrasse sur les quais de la Nive, à deux pas des Halles.</p>
             <div class="hero__ctas">
-                <a href="tel:0559569136" class="btn btn--primary">Reserver une table</a>
-                <a href="#services" class="btn btn--outline">Voir la carte</a>
+                <a href="tel:0559569136" class="btn btn--primary">Réserver</a>
+                <a href="#services" class="btn btn--outline">Découvrir la carte</a>
             </div>
-        </div>
-        <div class="hero__scroll">
-            <span class="hero__scroll-text">Decouvrir</span>
-            <div class="hero__scroll-line"></div>
         </div>
     </header>
 
-    <!-- About -->
+    <!-- ========== ABOUT ========== -->
     <section class="about" id="about">
         <div class="container">
             <div class="about__inner">
-                <div class="about__image">
-                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Interieur du restaurant Le Bistro'Quai">
+                <div class="about__image fade-in-left">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80" alt="Salle du Bistro'Quai avec ses murs de pierres">
                 </div>
-                <div class="about__content">
-                    <span class="section-label">Le Restaurant</span>
-                    <h2 class="section-title">Une table sur les quais de Bayonne</h2>
-                    <p class="about__text">Au bord de l'Adour, Le Bistro'Quai vous accueille dans une ambiance conviviale avec vue sur le fleuve. En salle ou en terrasse, profitez d'une cuisine genereuse preparee avec des produits frais et de saison.</p>
-                    <p class="about__text">Notre equipe attentionnee vous propose une carte gourmande ou se melent saveurs du terroir et inspirations de la mer. Rillettes de thon, merlu en croute de chorizo, et desserts maison vous attendent.</p>
-                    <p class="about__signature">L'equipe du Bistro'Quai</p>
+                <div class="about__content fade-in-right">
+                    <span class="section-label">Notre Histoire</span>
+                    <h2 class="section-title">Sur les bords de la Nive</h2>
+                    <p class="about__text">Depuis 2014, Le Bistro'Quai vous accueille dans un cadre sobre et chaleureux, au cœur de Bayonne. Notre salle aux murs de pierres et notre terrasse face à la Nive offrent le décor idéal pour un moment convivial.</p>
+                    <p class="about__text">Notre équipe vous propose une carte simple mais équilibrée, du camembert rôti au miel jusqu'aux desserts maison, en passant par notre fameux burger basque et le poisson du jour.</p>
+                    <p class="about__signature">— L'équipe du Bistro'Quai</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
+    <!-- ========== SERVICES ========== -->
     <section class="services" id="services">
         <div class="container">
-            <div class="services__header">
+            <div class="services__header fade-in">
                 <span class="section-label">La Carte</span>
-                <h2 class="section-title">Nos suggestions</h2>
-                <p class="services__subtitle">Produits frais, generosite, et saveurs</p>
+                <h2 class="section-title">Nos Spécialités</h2>
             </div>
             <div class="services__grid">
-                <div class="services__card">
-                    
-                    <h3 class="services__card-title">Entrees</h3>
-                    <p class="services__card-desc">Rillettes de thon maison, produits de la mer, saveurs du Sud-Ouest. Des entrees genereuses pour bien commencer.</p>
+                <div class="services__card fade-in">
+                    <h3 class="services__card-title">Entrées Gourmandes</h3>
+                    <p class="services__card-desc">Camembert rôti au miel, chipirons sauce catalane, assiette de charcuterie basque. Des saveurs du terroir pour bien commencer.</p>
                 </div>
-                <div class="services__card">
-                    
-                    <h3 class="services__card-title">Plats</h3>
-                    <p class="services__card-desc">Poissons frais, viandes du terroir, plat du jour. Notre specialite : le merlu en croute de chorizo.</p>
+                <div class="services__card fade-in">
+                    <h3 class="services__card-title">Plats Signature</h3>
+                    <p class="services__card-desc">Le burger basque maison, magret de canard au jus corsé, poisson du jour selon arrivage. Cuisine française revisitée avec passion.</p>
                 </div>
-                <div class="services__card">
-                    
-                    <h3 class="services__card-title">Desserts</h3>
-                    <p class="services__card-desc">Desserts maison, douceurs gourmandes. Une touche sucree pour terminer en beaute.</p>
+                <div class="services__card fade-in">
+                    <h3 class="services__card-title">Desserts Maison</h3>
+                    <p class="services__card-desc">Millefeuille aux agrumes, pain perdu de brioche, panna cotta aux fruits rouges. Tous nos desserts sont faits maison.</p>
                 </div>
             </div>
             <div class="services__cta">
-                <p class="services__price">Formule midi : 23 euros <span>entree + plat + dessert</span></p>
-                <a href="tel:0559569136" class="btn btn--primary">Reserver une table</a>
+                <a href="tel:0559569136" class="btn btn--primary">Réserver une table</a>
+                <p class="services__price">Menu midi 23-24€ <span>Carte ~35€</span></p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
+    <!-- ========== GALLERY ========== -->
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="gallery__header">
-                <span class="section-label">Galerie</span>
-                <h2 class="section-title">L'ambiance Bistro'Quai</h2>
+                <span class="section-label">Ambiance</span>
+                <h2 class="section-title">L'Expérience Bistro'Quai</h2>
             </div>
             <div class="gallery__grid">
-                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="{{GALLERY_1_ALT}}"></div>
-                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80" alt="{{GALLERY_2_ALT}}"></div>
-                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80" alt="{{GALLERY_3_ALT}}"></div>
-                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1535140728325-a4d3707eee61?w=400&q=80" alt="{{GALLERY_4_ALT}}"></div>
-                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80" alt="{{GALLERY_5_ALT}}"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=80" alt="Photo 1"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80" alt="Photo 2"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Photo 3"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Photo 4"></div>
+                <div class="gallery__item"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=400&q=80" alt="Photo 5"></div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- ========== TESTIMONIALS ========== -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="testimonials__header">
-                <span class="section-label">Avis clients</span>
+                <span class="section-label">Avis Clients</span>
                 <h2 class="section-title">Ce qu'ils en disent</h2>
             </div>
             <div class="testimonials__grid">
                 <div class="testimonial">
-                    <div class="testimonial__stars">5/5</div>
-                    <p class="testimonial__text">Tres bon restaurant. Personnel a l'ecoute et disponible. Rapport qualite prix plus que raisonnable. Les plats arrivent vite et la nourriture etait tres bonne.</p>
-                    <p class="testimonial__author">Camille S.</p>
-                    <p class="testimonial__source">Google - Octobre 2025</p>
+                    <div class="testimonial__stars">★★★★★</div>
+                    <p class="testimonial__text">Très bon bistrot avec un accueil chaleureux, service rapide. Menu du midi très copieux et délicieux. Vue sur la Nive et parking à proximité. Nous y reviendrons !</p>
+                    <p class="testimonial__author">Client Tripadvisor</p>
+                    <p class="testimonial__source">Tripadvisor</p>
                 </div>
                 <div class="testimonial">
-                    <div class="testimonial__stars">5/5</div>
-                    <p class="testimonial__text">Restaurant situe sur le quai de l'Adour. Accueil tres convivial avec un service attentionne. La formule midi a 23 euros est d'excellente qualite.</p>
-                    <p class="testimonial__author">Falco P.</p>
-                    <p class="testimonial__source">Google - Septembre 2025</p>
+                    <div class="testimonial__stars">★★★★★</div>
+                    <p class="testimonial__text">Excellente adresse ! Cuisine raffinée de grande qualité, produits frais qui offrent aux papilles un immense cadeau. Bravo et merci à toute l'équipe !</p>
+                    <p class="testimonial__author">Marie-Claire D.</p>
+                    <p class="testimonial__source">Google</p>
                 </div>
                 <div class="testimonial">
-                    <div class="testimonial__stars">5/5</div>
-                    <p class="testimonial__text">Excellent restaurant, tout etait parfait. Service 5/5, cuisine au top. Les rillettes de thon et le merlu en croute de chorizo etaient excellents.</p>
-                    <p class="testimonial__author">Aurelien P.</p>
-                    <p class="testimonial__source">Google - Aout 2025</p>
+                    <div class="testimonial__stars">★★★★★</div>
+                    <p class="testimonial__text">Le camembert rôti était délicieux, l'entrecôte bleue et le gratin dauphinois vraiment excellents ! Le personnel est accueillant et plein d'humour. Je recommande !</p>
+                    <p class="testimonial__author">Laurent M.</p>
+                    <p class="testimonial__source">Google</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- ========== CONTACT ========== -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact__inner">
                 <div class="contact__info">
                     <span class="section-label">Contact</span>
-                    <h2 class="section-title">Venez nous voir</h2>
+                    <h2 class="section-title">Nous Trouver</h2>
                     <div class="contact__item">
-                        <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        <div class="contact__item-content">
-                            <h4>Adresse</h4>
-                            <p>27 Quai Amiral Jaureguiberry<br>64100 Bayonne</p>
-                        </div>
+                        <h4>Adresse</h4>
+                        <p>27 Quai Amiral Jauréguiberry<br>64100 Bayonne</p>
                     </div>
                     <div class="contact__item">
-                        <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        <div class="contact__item-content">
-                            <h4>Téléphone</h4>
-                            <a href="tel:0559569136">05 59 56 91 36</a>
-                        </div>
+                        <h4>Téléphone</h4>
+                        <a href="tel:0559569136">05 59 56 91 36</a>
                     </div>
-                    <div class="contact__item">
-        <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
-        <div class="contact__item-content"><h4>Instagram</h4><a href="https://www.instagram.com/le_bistroquai64/" target="_blank">@le_bistroquai64</a></div>
-    </div>
+                    <div class="contact__item"><h4>Instagram</h4><a href="https://www.instagram.com/le_bistroquai64/" target="_blank">@le_bistroquai64</a></div>
                     <div class="contact__hours">
                         <h4>Horaires d'ouverture</h4>
                         <div class="contact__hours-row"><span>Lundi - Dimanche</span><span>12h-14h / 19h-22h</span></div>
                     </div>
                 </div>
-                <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.6424390624315!2d-1.4778063237887962!3d43.48893187111034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51408c2bcf7e21%3A0x6913aead1069c15c!2sLe%20Bistro&#39;Quai!5e0!3m2!1sfr!2sfr!4v1767641600897!5m2!1sfr!2sfr" allowfullscreen loading="lazy" title="Localisation du Patxamama"></iframe>
+                <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2898.123!2d-1.4778063!3d43.4889319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd51408c2bcf7e21%3A0x6913aead1069c15c!2sLe%20Bistro&#39;Quai!5e0!3m2!1sfr!2sfr!4v1704500000000" allowfullscreen loading="lazy" title="Localisation"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Form -->
+    <!-- ========== FORM ========== -->
     <section class="form" id="reservation">
         <div class="container">
             <div class="form__inner">
                 <div class="form__header">
-                    <span class="section-label">Reservation</span>
-                    <h2 class="section-title">Reservez votre table</h2>
+                    <span class="section-label">Réservation</span>
+                    <h2 class="section-title">Réservez votre table</h2>
                     <p>Ou appelez-nous au <a href="tel:0559569136">05 59 56 91 36</a></p>
                 </div>
                 <form id="contactForm">
-                    <div class="form__group"><label class="form__label" for="name">Nom</label><input class="form__input" type="text" id="name" placeholder="Votre nom" required></div>
-                    <div class="form__group"><label class="form__label" for="email">Email</label><input class="form__input" type="email" id="email" placeholder="votre@email.com" required></div>
-                    <div class="form__group"><label class="form__label" for="phone">Téléphone</label><input class="form__input" type="tel" id="phone" placeholder="06 XX XX XX XX"></div>
-                    <div class="form__group"><label class="form__label" for="message">Message</label><textarea class="form__textarea" id="message" placeholder="Date, nombre de personnes, terrasse..."></textarea></div>
+                    <div class="form__group">
+                        <label class="form__label" for="name">Nom</label>
+                        <input class="form__input" type="text" id="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email</label>
+                        <input class="form__input" type="email" id="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="phone">Téléphone</label>
+                        <input class="form__input" type="tel" id="phone" placeholder="06 XX XX XX XX">
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="message">Message</label>
+                        <textarea class="form__textarea" id="message" placeholder="Date, heure, nombre de personnes..."></textarea>
+                    </div>
                     <button type="submit" class="btn btn--primary form__submit">Envoyer la demande</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer__inner">
                 <a href="#" class="footer__brand">Le Bistro'Quai</a>
-                <div class="footer__social">
-                    <a href="https://www.instagram.com/le_bistroquai64/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.058-.976.045-1.505.207-1.858.344-.466.182-.8.398-1.15.748-.35.35-.566.684-.748 1.15-.137.353-.3.882-.344 1.857-.048 1.055-.058 1.37-.058 4.041 0 2.67.01 2.986.058 4.04.045.976.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.684.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058 2.67 0 2.987-.01 4.04-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041 0-2.67-.01-2.986-.058-4.04-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.055-.048-1.37-.058-4.041-.058zm0 3.063a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 8.468a3.333 3.333 0 100-6.666 3.333 3.333 0 000 6.666zm6.538-8.671a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a><a href="https://www.facebook.com/LeBistroQuai64" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                </div>
+                <div class="footer__social"><a href="https://www.instagram.com/le_bistroquai64/" target="_blank" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.9 4.9 0 0 1-1.153 1.772 4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.772-1.153 4.9 4.9 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.9 4.9 0 0 1 1.153-1.772A4.9 4.9 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5-9a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg></a><a href="https://www.facebook.com/LeBistroQuai64" target="_blank" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12z"/></svg></a></div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copy">© 2025 Le Bistro'Quai. Tous droits réservés.</p>
-                <div class="footer__links"><a href="/mentions-legales.html">Mentions légales</a><a href="/politique-confidentialite.html">Confidentialité</a></div>
-                <p class="footer__credit">Site créé par <a href="https://madebyyuca.com" target="_blank" rel="noopener">Yuca</a></p>
+                <p class="footer__copy">© 2025 Le Bistro'Quai</p>
+                <div class="footer__links">
+                    <a href="/mentions-legales.html">Mentions légales</a>
+                    <a href="/politique-confidentialite.html">Confidentialité</a>
+                </div>
+                <p class="footer__credit">Site par <a href="https://madebyyuca.com" target="_blank" rel="noopener">Yuca</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Chatbot -->
-    <button class="yuca-trigger" id="yucaTrigger" aria-label="Chat"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></button>
+    <!-- ========== CHATBOT ========== -->
+    <button class="yuca-trigger" id="yucaTrigger" aria-label="Chat">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </button>
     <div class="yuca-window" id="yucaWindow">
         <div class="yuca-header">
             <div class="yuca-avatar">B</div>
-            <div class="yuca-header-info"><h4>Le Bistro'Quai</h4><span>Répond rapidement</span></div>
-            <button class="yuca-close" id="yucaClose"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+            <div class="yuca-header-info">
+                <h4>Le Bistro'Quai</h4>
+                <span>En ligne</span>
+            </div>
+            <button class="yuca-close" id="yucaClose">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
         </div>
         <div class="yuca-messages" id="yucaMessages"></div>
         <div class="yuca-input-area">
             <input type="text" class="yuca-input" id="yucaInput" placeholder="Posez votre question...">
-            <button class="yuca-send" id="yucaSend"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+            <button class="yuca-send" id="yucaSend">
+                <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
         </div>
     </div>
 
-    <!-- Site Config (à personnaliser) -->
+    <!-- ========== SCRIPTS ========== -->
     <script>
-        window.SITE_CONFIG = {
-            businessName: 'Le Bistro'Quai',
-            chatbotPrompt: `Tu es l'assistant du restaurant Le Bistro'Quai a Bayonne. Adresse: 27 Quai Amiral Jaureguiberry. Tel: 05 59 56 91 36.  Réponds TOUJOURS dans la langue utilisée par le client (français, anglais, espagnol, etc.). Terrasse vue fleuve. Formule midi 23 euros. Horaires: tous les jours 12h-14h et 19h-22h. Reponds en 2-3 phrases max. Termine par [SUGGESTIONS:Option1|Option2]`,
-            chatbotWelcome: 'Bonjour, bienvenue au Bistro'Quai. Comment puis-je vous aider ?',
-            chatbotSuggestions: ['Horaires', 'Reserver', 'Voir la carte'],
-            avatarLetter: 'B'
-        };
+    // Config
+    const CFG = {
+        name: 'Le Bistro'Quai',
+        prompt: `Tu es l'assistant virtuel du restaurant Le Bistro'Quai à Bayonne. Tu représentes le restaurant, pas toi-même. Réponds TOUJOURS dans la langue du client (français, anglais, espagnol...). Adresse: 27 Quai Amiral Jauréguiberry, 64100 Bayonne. Téléphone: 05 59 56 91 36. Horaires: Tous les jours 12h-14h et 19h-22h (7j/7). Spécialités: burger basque, camembert rôti au miel, chipirons, magret de canard, desserts maison. Prix: menu midi 23-24€, carte environ 35€. Terrasse face à la Nive, près des Halles. Accessible PMR. Propriétaires: Sarah et Yan. Réponds en 2-3 phrases max, sois chaleureux et professionnel. Termine par [SUGGESTIONS:Option1|Option2]`,
+        welcome: 'Bienvenue au Bistro'Quai ! Comment puis-je vous aider ?',
+        suggestions: ['Horaires','Réserver','La carte']
+    };
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+    // Mobile nav
+    const burger = document.getElementById('navBurger');
+    const mobNav = document.getElementById('navMobile');
+    const overlay = document.getElementById('navOverlay');
+    function toggleNav() {
+        mobNav.classList.toggle('open');
+        overlay.classList.toggle('visible');
+        document.body.style.overflow = mobNav.classList.contains('open') ? 'hidden' : '';
+    }
+    burger.onclick = toggleNav;
+    overlay.onclick = toggleNav;
+    mobNav.querySelectorAll('a').forEach(a => a.onclick = toggleNav);
+
+    // Form
+    document.getElementById('contactForm').onsubmit = async function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        const txt = btn.textContent;
+        btn.textContent = 'Envoi...';
+        btn.disabled = true;
+        try {
+            await fetch('https://yuca-api.vercel.app/api/lead', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    business: CFG.name,
+                    project: document.getElementById('message').value,
+                    source: 'site-' + CFG.name.toLowerCase().replace(/\s+/g, '-')
+                })
+            });
+            btn.textContent = 'Envoyé !';
+            btn.style.background = '#22c55e';
+            this.reset();
+        } catch {
+            btn.textContent = 'Erreur';
+            btn.style.background = '#ef4444';
+        }
+        setTimeout(() => { btn.textContent = txt; btn.style.background = ''; btn.disabled = false; }, 3000);
+    };
+
+    // Chatbot
+    const trigger = document.getElementById('yucaTrigger');
+    const win = document.getElementById('yucaWindow');
+    const closeBtn = document.getElementById('yucaClose');
+    const msgBox = document.getElementById('yucaMessages');
+    const input = document.getElementById('yucaInput');
+    const sendBtn = document.getElementById('yucaSend');
+    let msgs = [], isOpen = false;
+
+    function toggle() {
+        isOpen = !isOpen;
+        win.classList.toggle('open', isOpen);
+        if (isOpen && !msgs.length) addBot(CFG.welcome, CFG.suggestions);
+    }
+    trigger.onclick = toggle;
+    closeBtn.onclick = toggle;
+
+    function addBot(t, sugg) {
+        const d = document.createElement('div');
+        d.className = 'yuca-message yuca-message--bot';
+        let h = t;
+        if (sugg?.length) {
+            h += '<div class="yuca-quick-replies">';
+            sugg.forEach(s => h += `<button class="yuca-quick-reply" data-q="${s}">${s}</button>`);
+            h += '</div>';
+        }
+        d.innerHTML = h;
+        msgBox.appendChild(d);
+        msgBox.scrollTop = msgBox.scrollHeight;
+        d.querySelectorAll('.yuca-quick-reply').forEach(b => b.onclick = () => send(b.dataset.q));
+        msgs.push({ role: 'assistant', content: t });
+    }
+
+    function addUser(t) {
+        const d = document.createElement('div');
+        d.className = 'yuca-message yuca-message--user';
+        d.textContent = t;
+        msgBox.appendChild(d);
+        msgBox.scrollTop = msgBox.scrollHeight;
+        msgs.push({ role: 'user', content: t });
+    }
+
+    function showTyping() {
+        const d = document.createElement('div');
+        d.className = 'yuca-typing';
+        d.id = 'typ';
+        d.innerHTML = '<span></span><span></span><span></span>';
+        msgBox.appendChild(d);
+        msgBox.scrollTop = msgBox.scrollHeight;
+    }
+
+    function hideTyping() { document.getElementById('typ')?.remove(); }
+
+    async function send(q) {
+        const txt = q || input.value.trim();
+        if (!txt) return;
+        input.value = '';
+        addUser(txt);
+        showTyping();
+        try {
+            const res = await fetch('https://yuca-api.vercel.app/api/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    system: CFG.prompt,
+                    messages: msgs.map(m => ({ role: m.role, content: m.content }))
+                })
+            });
+            const data = await res.json();
+            hideTyping();
+            let resp = data.content?.[0]?.text || 'Désolé, je n\'ai pas compris.';
+            let sugg = null;
+            const m = resp.match(/\[SUGGESTIONS?:(.+?)\]/i);
+            if (m) {
+                sugg = m[1].split('|').map(s => s.trim());
+                resp = resp.replace(m[0], '').trim();
+            }
+            addBot(resp, sugg);
+        } catch (e) {
+            hideTyping();
+            addBot('Désolé, problème technique. Appelez-nous directement.', ['Appeler']);
+        }
+    }
+
+    sendBtn.onclick = () => send();
+    input.onkeypress = e => { if (e.key === 'Enter') send(); };
+
+    // Animations au scroll
+    document.body.classList.add('js-loaded');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
     </script>
-    
-    <!-- Core JS -->
-    <script src="core.js"></script>
+
 </body>
 </html>
